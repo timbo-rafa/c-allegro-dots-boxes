@@ -4,7 +4,7 @@ NAME=dots-boxes
 
 default: $(NAME)
 
-dots-boxes: $(NAME).c
+$(NAME) : $(NAME).c
 		cc $(NAME).c -o $(NAME) $(LIBFLAG)
 
 clean:
