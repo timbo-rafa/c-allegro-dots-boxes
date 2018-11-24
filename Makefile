@@ -1,9 +1,11 @@
 LIBFLAG = $(shell pkg-config  allegro --libs --cflags)
 
-default: dots-boxes
+NAME=dots-boxes
 
-dots-boxes: dots-boxes.c
-		cc dots-boxes.c -o dots-boxes $(LIBFLAG)
+default: $(NAME)
+
+dots-boxes: $(NAME).c
+		cc $(NAME).c -o $(NAME) $(LIBFLAG)
 
 clean:
-	 rm -f dots-boxes
+	 rm -f $(NAME)
